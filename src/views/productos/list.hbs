@@ -1,0 +1,28 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each productos}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                   <div class="card-body">
+                           <h3 class="card-title text-uppercase">
+                               {{NOMBRE_PRODUCTO}}
+                           </h3>
+                       <p class="m-2"> CANTIDAD PRODUCTO: {{CANTIDAD_PRODUCTO}}</p>
+                       <p class="m-2"> PRECIO COMPRA: {{PRECIO_COMPRA}}$</p>
+                       <p class="m-2"> PRECIO VENTA: {{PRECIO_VENTA}}$</p>
+                       <p class="m-2"> FECHA REGISTRO: {{FECHA_PRODUCTO}}</p>
+                       <a href="/productos/delete/{{ID_PRODUCTO}}" class="btn btn-danger">Eliminar</a>
+                       <a href="/productos/edit/{{ID_PRODUCTO}}" class="btn btn-secondary">Modificar</a>
+                   </div> 
+                </div>
+            </div>
+            {{else}}
+            <div class="col-md-4 mx-auto">
+               <div class="card card-body text-center">
+                   <p>No hay productos registrados aún</p>
+                   <a href="/productos/add">Registra un producto</a>
+               </div> 
+            </div>
+        {{/each}}
+    </div>
+</div>
