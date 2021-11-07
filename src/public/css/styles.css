@@ -1,3 +1,9 @@
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+.navbar{width: 100%;
+background-image: linear-gradient(to right, #c81c20, #c81c20);}
+
 body {
     background: #F5F6F5;
     font: 'Oswald',helvetica,sans-serif;
