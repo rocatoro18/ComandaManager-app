@@ -23,6 +23,8 @@ DESCRIBE EMPLEADOS;
 
 -- TABLA PRODUCTOS
 
+-- A ser modificada próximamente para seguir las observaciones del cliente
+
 CREATE TABLE PRODUCTOS(
     ID_PRODUCTO INT(11) NOT NULL,
     NOMBRE_PRODUCTO VARCHAR(50) NOT NULL,
