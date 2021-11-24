@@ -9,7 +9,6 @@ passport.use('local.signin', new localStrategy({
     passwordField: 'PASSWORD',
     passReqToCallback: true
 }, async (req,NOMBRE_USUARIO,PASSWORD,done) => {
-    console.log(req.body);
     const rows = await pool.query('SELECT * FROM empleados WHERE NOMBRE_EMPLEADO = ?',[NOMBRE_USUARIO]);
     if(rows.length > 0){
         const user = rows[0];

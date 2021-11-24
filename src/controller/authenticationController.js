@@ -19,7 +19,7 @@ module.exports = {
             successRedirect: '/profile',
             failureRedirect: '/signup',
             //failureFlash: true
-        })
+        })(req,res);
     },
     signinR:function (req,res,next) {
         passport.authenticate('local.signin',{
