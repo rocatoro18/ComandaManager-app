@@ -1,0 +1,30 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/productos/edit/{{producto.ID_PRODUCTO}}" method="POST">
+                    <h1>TEST REGISTRO COMANDA</h1>
+                        <div class="form-group">
+                            <input type = "text" value = "{{producto.NOMBRE_PRODUCTO}}" class = "form-control" name = "nombre_producto" placeholder="Nombre Producto" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" value = "{{producto.CANTIDAD_PRODUCTO}}" class = "form-control" name = "cantidad_producto" placeholder="Cantidad Producto">
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" value = "{{producto.PRECIO_COMPRA}}" class= "form-control" name = "precio_compra" placeholder="Precio Compra">
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" value = "{{producto.PRECIO_VENTA}}" class= "form-control" name = "precio_venta" placeholder="Precio Venta">
+                        </div>
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Modificar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
