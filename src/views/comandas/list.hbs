@@ -1,26 +1,27 @@
 <div class="container p-4">
     <div class="row">
-        {{#each productos}}
+        {{#each comanda}}
             <div class="col-md-3">
                 <div class="card text-center">
                    <div class="card-body">
                            <h3 class="card-title text-uppercase">
-                               {{NOMBRE_PRODUCTO}}
+                               {{FECHA_COMANDA}}
                            </h3>
-                       <p class="m-2"> CANTIDAD PRODUCTO: {{CANTIDAD_PRODUCTO}}</p>
-                       <p class="m-2"> PRECIO COMPRA: {{PRECIO_COMPRA}}$</p>
-                       <p class="m-2"> PRECIO VENTA: {{PRECIO_VENTA}}$</p>
-                       <p class="m-2"> FECHA REGISTRO: {{FECHA_PRODUCTO}}</p>
-                       <a href="/productos/delete/{{ID_PRODUCTO}}" class="btn btn-danger">Eliminar</a>
-                       <a href="/productos/edit/{{ID_PRODUCTO}}" class="btn btn-secondary">Modificar</a>
+                       <p class="m-2"> NÚMERO MESA: {{NUMERO_MESA}}</p>
+                       <p class="m-2"> NÚMERO PERSONAS: {{NUMERO_PERSONAS}}$</p>
+                       <p class="m-2"> ANOTACIÓN COMANDA: {{ANOTACION_COMANDA}}</p>
+                       <p class="m-2"> CANTIDAD COMANDA: {{CANTIDAD_COMANDA}}</p>
+                       <p class="m-2"> IMPORTE COMANDA: {{IMPORTE_COMANDA}}</p>
+                       <a href="/comandas/delete/{{ID_COMANDA}}" class="btn btn-danger">Eliminar</a>
+                       <a href="/comandas/edit/{{ID_COMANDA}}" class="btn btn-secondary">Modificar</a>
                    </div> 
                 </div>
             </div>
             {{else}}
             <div class="col-md-4 mx-auto">
                <div class="card card-body text-center">
-                   <p>No hay productos registrados aún</p>
-                   <a href="/productos/add">Registra un producto</a>
+                   <p>No hay comandas registradas aún</p>
+                   <a href="/comandas/add">Registra una comanda</a>
                </div> 
             </div>
         {{/each}}

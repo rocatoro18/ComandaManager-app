@@ -3,18 +3,21 @@
         <div class="col-md-4 mx-auto">
             <div class="card">
                 <div class="card-body">
-                    <form action="/productos/add" method="POST">
+                    <form action="/comandas/add" method="POST">
                         <div class="form-group">
-                            <input type = "text" class = "form-control" name = "nombre_producto" placeholder="Nombre Producto" autofocus>
+                            <input type = "text" class = "form-control" name = "numero_mesa" placeholder="Numero Mesa" autofocus>
                         </div>
                         <div class="form-group">
-                            <input type = "text" class = "form-control" name = "cantidad_producto" placeholder="Cantidad Producto">
+                            <input type = "text" class = "form-control" name = "numero_personas" placeholder="Numero Personas">
                         </div>
                         <div class="form-group">
-                            <input type = "text" class= "form-control" name = "precio_compra" placeholder="Precio Compra">
+                            <input type = "text" class= "form-control" name = "anotacion_comanda" placeholder="Anotación Comanda">
                         </div>
                         <div class="form-group">
-                            <input type = "text" class= "form-control" name = "precio_venta" placeholder="Precio Venta">
+                            <input type = "text" class= "form-control" name = "cantidad_comanda" placeholder="Cantidad Comanda">
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" class= "form-control" name = "importe_comanda" placeholder="Importe Comanda">
                         </div>
                         <div class="form-group">
                             <button class = "btn btn-success btn-block">
