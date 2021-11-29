@@ -1,0 +1,25 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each venta}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                   <div class="card-body">
+                           <h3 class="card-title text-uppercase">
+                               <p class="m-2"> ID VENTA: {{ID_VENTA}}</p>
+                           </h3>
+                       <p class="m-2"> Total Venta: {{TOTAL_VENTA}}$</p>
+                       <a href="/ventas/delete/{{ID_VENTA}}" class="btn btn-danger">Eliminar</a>
+                       <a href="/ventas/edit/{{ID_VENTA}}" class="btn btn-secondary">Modificar</a>
+                   </div> 
+                </div>
+            </div>
+            {{else}}
+            <div class="col-md-4 mx-auto">
+               <div class="card card-body text-center">
+                   <p>No hay ventas registradas aún</p>
+                   <a href="/ventas/add">Registra una venta</a>
+               </div> 
+            </div>
+        {{/each}}
+    </div>
+</div>

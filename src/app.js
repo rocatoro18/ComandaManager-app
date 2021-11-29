@@ -59,6 +59,7 @@ app.use(require('./routes/authentication'));
 app.use('/productos',require('./routes/productos')); // CHECAR MAS DELANTE
 
 app.use('/comandas',require('./routes/comandas'));
+app.use('/ventas',require('./routes/ventas'));
 
 /*
 app.use(require('./routes'));
