@@ -1,0 +1,63 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/productos/add" method="POST">
+                        <div class="form-group col-lg-10">
+                            <h3>PRODUCTOS LÁCTEOS Y CONGELADOS</h3>
+                            <select class="show-tick form-control noBSselect">
+                                <option value="">---SELECCIONAR PRODUCTO---</option>
+                                <option value="" disabled="true">---LÁCTEOS---</option>
+                                <option value="LECHE ENTERA LALA" name="nombre_producto_lc">LECHE ENTERA LALA</option>
+                                <option value="LECHE DESLACTOSADA LIGHT" name="nombre_producto_lc">LECHE DESLACTOSADA LIGHT</option>
+                                <option value="MEDIA CREMA" name="nombre_producto_lc">MEDIA CREMA</option>
+                                <option value="QUESO GOUDA" name="nombre_producto_lc">QUESO GOUDA</option>
+                                <option value="QUESO PANELA" name="nombre_producto_lc">QUESO PANELA</option>
+                                <option value="QUESO FRESCO REGIONAL" name="nombre_producto_lc">QUESO FRESCO REGIONAL</option>
+                                <option value="QUESO AMARILLO REBANADO" name="nombre_producto_lc">QUESO AMARILLO REBANADO</option>
+                                <option value="QUESO PARMESADO BOTE GRANDE" name="nombre_producto_lc">QUESO PARMESADO BOTE GRANDE</option>
+                                <option value="QUESO CREMA PHILADELPHIA" name="nombre_producto_lc">QUESO CREMA PHILADELPHIA</option>
+                                <option value="LECHE CONDESADA LECHERA" name="nombre_producto_lc">LECHE CONDESADA LECHERA</option>
+                                <option value="LECHE CARNATION CLAVEL" name="nombre_producto_lc">LECHE CARNATION CLAVEL</option>
+                                <option value="MARGARITA" name="nombre_producto_lc">MARGARINA</option>
+                                <option value="MANTEQUILLA" name="nombre_producto_lc">MANTEQUILLA</option>
+                                <option value="HUEVOS" name="nombre_producto_lc">HUEVOS</option>
+                                <option value="" disabled="true">---CONGELADOS---</option>
+                                <option value="PAPA SAZONADA" name="nombre_producto_lc">PAPA SAZONADA</option>
+                                <option value="MANGO CONGELADO" name="nombre_producto_lc">MANGO CONGELADO</option>
+                                <option value="PIÑA CONGELADA" name="nombre_producto_lc">PIÑA CONGELADA</option>
+                                <option value="FRESA CONGELADA" name="nombre_producto_lc">FRESA CONGELADA</option>
+                                <option value="ELOTE AMARILLO EN GRANO" name="nombre_producto_lc">ELOTE AMARILLO EN GRANO</option>
+                                <option value="MEZCLA CAMPESINA" name="nombre_producto_lc">MEZCLA CAMPESINA</option>
+                                <option value="RAJAS DE CHILE POBLANO" name="nombre_producto_lc">RAJAS DE CHILE POBLANO</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" class = "form-control" name = "cantidad_producto_lc" placeholder="Cantidad Producto">
+                        </div>
+                        <div class="form-group col-lg-10">
+                            <select class="show-tick form-control noBSselect">
+                                <option value="">---UNIDAD DE MEDIDA---</option>
+                                <option value="KG" name="unidad_producto_lc">KG</option>
+                                <option value="LT" name="unidad_producto_lc">LT</option>
+                                <option value="GALON" name="unidad_producto_lc">GALON</option>
+                                <option value="CAJA" name="unidad_producto_lc">CAJA</option>
+                                <option value="LATAS" name="unidad_producto_lc">LATAS</option>
+                                <option value="BOLSA 3 KG" name="unidad_producto_lc">BOLSA 3 KG</option>
+                                <option value="BOTES KG" name="unidad_producto_lc">BOTES KG</option>
+                                <option value="CARTERAS" name="unidad_producto_lc">CARTERAS</option>
+                                <option value="BARRA 1.9 KG" name="unidad_producto_lc">BARRA 1.9 KG</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

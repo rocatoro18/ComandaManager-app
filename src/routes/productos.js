@@ -7,7 +7,13 @@ const productoController = require('../controller/productoController');
 
 //GET
 router.get('/',isLoggedIn,productoController.indexProductos);
-router.get('/add',isLoggedIn,productoController.addProducto);
+//router.get('/add',isLoggedIn,productoController.addProducto);
+//router.get('/addtest',isLoggedIn,productoController.addProducto);
+//router.get('/addtest2',isLoggedIn,productoController.addProducto);
+//router.get('/addtest3',isLoggedIn,productoController.addProducto);
+//router.get('/addtest4',isLoggedIn,productoController.addProducto);
+//router.get('/addtest5',isLoggedIn,productoController.addProducto);
+router.get('/addtest6',isLoggedIn,productoController.addProducto);
 router.get('/edit/:id',isLoggedIn,productoController.editProducto);
 router.get('/delete/:id',isLoggedIn,productoController.deleteProducto);
 

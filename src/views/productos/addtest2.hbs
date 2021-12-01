@@ -1,0 +1,85 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/productos/add" method="POST">
+                        <div class="form-group col-lg-10">
+                            <h3>PRODUCTOS VEGETALES Y FRUTAS</h3>
+                            <select class="show-tick form-control noBSselect">
+                                <option value="">---SELECCIONAR PRODUCTO---</option>
+                                <option value="" disabled="true">---VEGETALES---</option>
+                                <option value="LECHUGA OREJONA" name="nombre_producto_vg">LECHUGA OREJONA</option>
+                                <option value="LECHUGA ROMANA" name="nombre_producto_vg">LECHUGA ROMANA</option>
+                                <option value="TOMATE SALADETE" name="nombre_producto_vg">TOMATE SALADETE</option>
+                                <option value="TOMATILLO" name="nombre_producto_vg">TOMATILLO</option>
+                                <option value="CEBOLLA BLANCA" name="nombre_producto_vg">CEBOLLA BLANCA</option>
+                                <option value="CEBOLLA MORADA" name="nombre_producto_vg">CEBOLLA MORADA</option>
+                                <option value="REPOLLO" name="nombre_producto_vg">REPOLLO</option>
+                                <option value="PAPA BLANCA" name="nombre_producto_vg">PAPA BLANCA</option>
+                                <option value="PAPA CAMBRAY" name="nombre_producto_vg">PAPA CAMBRAY</option>
+                                <option value="CAMOTE" name="nombre_producto_vg">CAMOTE</option>
+                                <option value="CALABAZA ITALIANA" name="nombre_producto_vg">CALABAZA ITALIANA</option>
+                                <option value="LIMON" name="nombre_producto_vg">LIMON</option>
+                                <option value="ZANAHORIA" name="nombre_producto_vg">ZANAHORIA</option>
+                                <option value="PEPINO" name="nombre_producto_vg">PEPINO</option>
+                                <option value="BROCOLI" name="nombre_producto_vg">BROCOLI</option>
+                                <option value="COLIFLOR" name="nombre_producto_vg">COLIFLOR</option>
+                                <option value="CHILE SERRANO" name="nombre_producto_vg">CHILE SERRANO</option>
+                                <option value="CHILE VERDE" name="nombre_producto_vg">CHILE VERDE</option>
+                                <option value="CHILE POBLANO" name="nombre_producto_vg">CHILE POBLANO</option>
+                                <option value="PIMIENTO VERDE" name="nombre_producto_vg">PIMIENTO VERDE</option>
+                                <option value="PIMIENTO ROJO" name="nombre_producto_vg">PIMIENTO ROJO</option>
+                                <option value="CHILE COLORADO REGIONAL" name="nombre_producto_vg">CHILE COLORADO REGIONAL</option>
+                                <option value="CHILE COLORADO MOLIDO" name="nombre_producto_vg">CHILE COLORADO MOLIDO</option>
+                                <option value="CHILTEPIN" name="nombre_producto_vg">CHILTEPIN</option>
+                                <option value="CHILE PASILLA" name="nombre_producto_vg">CHILE PASILLA</option>
+                                <option value="CHILE JALAPEÑO" name="nombre_producto_vg">CHILE JALAPEÑO</option>
+                                <option value="CHILE HABANERO" name="nombre_producto_vg">CHILE HABANERO</option>
+                                <option value="CEBOLLA CAMBRAY" name="nombre_producto_vg">CEBOLLA CAMBRAY</option>
+                                <option value="NOPALITOS" name="nombre_producto_vg">NOPALITOS</option>
+                                <option value="CILANTRO" name="nombre_producto_vg">CILANTRO</option>
+                                <option value="ALBAHACA FRESCA" name="nombre_producto_vg">ALBAHACA FRESCA</option>
+                                <option value="ROMERO FRESCO" name="nombre_producto_vg">ROMERO FRESCO</option>
+                                <option value="PEREJIL FRESCO" name="nombre_producto_vg">PEREJIL FRESCO</option>
+                                <option value="ELOTE ENTERO" name="nombre_producto_vg">ELOTE ENTERO</option>
+                                <option value="RABANO" name="nombre_producto_vg">RABANO</option>
+                                <option value="ESPINACAS EN BOLSA" name="nombre_producto_vg">ESPINACAS EN BOLSA</option>
+                                <option value="GERMINADO DE ALFALFA" name="nombre_producto_vg">GERMINADO DE ALFALFA</option>
+                                <option value="FRIJOL SOJA (GERMINADO)" name="nombre_producto_vg">FRIJOLITO SOJA (GERMINADO)</option>
+                                <option value="" disabled="true">---FRUTAS---</option>
+                                <option value="PLATANO" name="nombre_producto_vg">PLATANO</option>
+                                <option value="MANZANA VERDE" name="nombre_producto_vg">MANZANA VERDE</option>
+                                <option value="MANZANA ROJA" name="nombre_producto_vg">MANZANA ROJA</option>
+                                <option value="PAPAYA" name="nombre_producto_vg">PAPAYA</option>
+                                <option value="MELON" name="nombre_producto_vg">MELON</option>
+                                <option value="PIÑA MIEL" name="nombre_producto_vg">PIÑA MIEL</option>
+                                <option value="GUAYABA" name="nombre_producto_vg">GUAYABA</option>
+                                <option value="MEMBRILLO" name="nombre_producto_vg">MEMBRILLO</option>
+                                <option value="MANGO" name="nombre_producto_vg">MANGO</option>
+                                <option value="SANDIA" name="nombre_producto_vg">SANDIA</option>
+                                <option value="MANDARINA" name="nombre_producto_vg">MANDARINA</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" class = "form-control" name = "cantidad_producto_vg" placeholder="Cantidad Producto">
+                        </div>
+                        <div class="form-group col-lg-10">
+                            <select class="show-tick form-control noBSselect">
+                                <option value="">---UNIDAD DE MEDIDA---</option>
+                                <option value="KG" name="unidad_producto_vg">KG</option>
+                                <option value="MAZO" name="unidad_producto_vg">MAZO</option>
+                                <option value="PIEZA" name="unidad_producto_vg">PIEZA</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/productos/add" method="POST">
+                        <div class="form-group col-lg-10">
+                            <h3>PRODUCTOS CÁRNICOS</h3>
+                            <select class="show-tick form-control noBSselect">
+                                <option value="">---SELECCIONAR PRODUCTO---</option>
+                                <option value="" disabled="true">---CERDO---</option>
+                                <option value="PIERNA" name="nombre_producto_carnico">PIERNA</option>
+                                <option value="COSTILLA" name="nombre_producto_carnico">COSTILLA</option>
+                                <option value="LOMO" name="nombre_producto_carnico">LOMO</option>
+                                <option value="CHICHARRON" name="nombre_producto_carnico">CHICHARRON</option>
+                                <option value="CHICHARRON PRENSADO" name="nombre_producto_carnico">CHICHARRON PRENSADO</option>
+                                <option value="" disabled="true">---POLLO---</option>
+                                <option value="PECHUGA MARIPOSA" name="nombre_producto_carnico">PECHUGA MARIPOSA</option>
+                                <option value="PIERNA BATE" name="nombre_producto_carnico">PIERNA BATE</option>
+                                <option value="MUSLO" name="nombre_producto_carnico">MUSLO</option>
+                                <option value=""disabled="true">---RES---</option>
+                                <option value="MOLIDA 90/10" name="nombre_producto_carnico">MOLIDA 90/10</option>
+                                <option value="BISTEK PULPA NEGRA" name="nombre_producto_carnico">BISTEK PULPA NEGRA</option>
+                                <option value="PECHO" name="nombre_producto_carnico">PECHO</option>
+                                <option value="COLA" name="nombre_producto_carnico">COLA</option>
+                                <option value="CHAMBERETE" name="nombre_producto_carnico">CHAMBERETE</option>
+                                <option value="" disabled="true">---PESCADOS Y MARISCOS---</option>
+                                <option value="TILAPIA" name="nombre_producto_carnico">TILAPIA</option>
+                                <option value="CAMARÓN SECO" name="nombre_producto_carnico">CAMARÓN SECO</option>
+                                <option value="" disabled="true">---CARNES FRIAS---</option>
+                                <option value="JAMÓN DE PAVO FUD" name="nombre_producto_carnico">JAMÓN DE PAVO FUD</option>
+                                <option value="JAMÓN DE PIERNA FUD" name="nombre_producto_carnico">JAMÓN DE PIERNA FUD</option>
+                                <option value="TOCINO PICADO" name="nombre_producto_carnico">TOCINO PICADO</option>
+                                <option value="SALCHICHA DE PAVO" name="nombre_producto_carnico">SALCHICHA DE PAVO</option>
+                                <option value="PEPERONI" name="nombre_producto_carnico">PEPERONI</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" class = "form-control" name = "kilogramos_producto_carnico" placeholder="Kilogramos Producto">
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" class= "form-control" name = "costo_unitario_producto_carnico" placeholder="Costo Unitario">
+                        </div>
+                        <div class="form-group">
+                            <button class = "btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
