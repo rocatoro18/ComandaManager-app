@@ -13,12 +13,12 @@ module.exports = {
     },
     addProducto:function (req,res) {
         //res.render('productos/add');
-        //res.render('productos/addtest');
+        res.render('productos/addtest');
         //res.render('productos/addtest2');
         //res.render('productos/addtest3');
         //res.render('productos/addtest4');
         //res.render('productos/addtest5');
-        res.render('productos/addtest6');
+        //res.render('productos/addtest6');
     },
     editProducto:function (req,res) {
         const {id} = req.params;
