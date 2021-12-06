@@ -12,8 +12,8 @@ module.exports = {
         });
     },
     addProducto:function (req,res) {
-        //res.render('productos/add');
-        res.render('productos/addtest');
+        res.render('productos/add');
+        //res.render('productos/addtest');
         //res.render('productos/addtest2');
         //res.render('productos/addtest3');
         //res.render('productos/addtest4');
@@ -34,12 +34,12 @@ module.exports = {
         });
     },
     insertarProducto:function (req,res) {
-        const {nombre_producto, cantidad_producto, precio_compra, precio_venta} = req.body;
+        const {nombre_producto, categoria_producto, cantidad_producto, unidad_medida_producto} = req.body;
         const newProducto = {
         nombre_producto,
+        categoria_producto,
         cantidad_producto,
-        precio_compra,
-        precio_venta,
+        unidad_medida_producto,
         //ID_USUARIO: req.user.ID_USUARIO
         };
         producto.insertar(pool,newProducto, function (err) {
