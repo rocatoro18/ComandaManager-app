@@ -49,12 +49,12 @@ module.exports = {
     },
     editarProducto:function (req,res){
         const {id} = req.params;
-        const {nombre_producto, cantidad_producto, precio_compra, precio_venta} = req.body;
+        const {nombre_producto, categoria_producto, cantidad_producto, unidad_medida_producto} = req.body;
         const newProducto = {
         nombre_producto,
+        categoria_producto,
         cantidad_producto,
-        precio_compra,
-        precio_venta
+        unidad_medida_producto
     };
         producto.editarProducto(pool,id,newProducto, function (err){
             req.flash('success','Actualizado con éxito');
