@@ -16,7 +16,7 @@ const passport = require('passport');
 // Inicializaciones 
 const app = express();
 require('./lib/passport');
-
+//ejs
 
 // Configuraciones
 app.set('port',process.env.PORT || 4000);
