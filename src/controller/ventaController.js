@@ -11,7 +11,7 @@ module.exports = {
             res.render('productos/list',{productos:datos});
         });*/
         venta.obtener(pool,function (err,datos){
-            res.render('ventas/list',{venta:datos});
+            res.render('ventas/list',{ventas:datos});
         });
     },
     addVenta:function (req,res) {
@@ -24,7 +24,7 @@ module.exports = {
         });*/
         const {id} = req.params;
         venta.editar(pool,id,function (err,datos){
-            res.render('ventas/edit',{venta:datos[0]});
+            res.render('ventas/edit',{ventas:datos[0]});
         });
     },
     deleteVenta:function (req,res) {

@@ -11,7 +11,7 @@ module.exports = {
             res.render('productos/list',{productos:datos});
         });*/
         comanda.obtener(pool,function (err,datos){
-            res.render('comandas/list',{comanda:datos});
+            res.render('comandas/list',{comandas:datos});
         });
     },
     addComanda:function (req,res) {
@@ -24,7 +24,7 @@ module.exports = {
         });*/
         const {id} = req.params;
         comanda.editar(pool,id,function (err,datos){
-            res.render('comandas/edit',{comanda:datos[0]});
+            res.render('comandas/edit',{comandas:datos[0]});
         });
     },
     deleteComanda:function (req,res) {

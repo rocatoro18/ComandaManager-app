@@ -10,22 +10,24 @@
         </tr>
     </thead>
         <tbody>
-            {{#each venta}}
+            <% if(ventas.length != 0) {%>
+            <% for(let venta = 0; venta < ventas.length; venta++) {%>
                 <tr>
-                    <td>{{ID_VENTA}}</td>
-                    <td>{{TOTAL_VENTA}}</td>
+                    <td><%=ventas[venta].ID_VENTA %></td>
+                    <td><%=ventas[venta].TOTAL_VENTA %></td>
                     <td class="text-end">
-                        <a href="/ventas/edit/{{ID_VENTA}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Editar</a>
-                        <a href="/ventas/delete/{{ID_VENTA}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Eliminar</a>
+                        <a href="/ventas/edit/<%=ventas[venta].ID_VENTA%>" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Editar</a>
+                        <a href="/ventas/delete/<%=ventas[venta].ID_VENTA%>" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Eliminar</a>
                     </td>
                 </tr>
-                {{else}}
+                <% } %>
+                <% } else {%>
                 <div class="col-md-4 mx-auto">
                     <div class="card card-body text-center">
                         <p>No hay ventas registradas aún</p>
                         <a href="/ventas/add">Registra una venta</a>
                     </div> 
                 </div>
-                {{/each}}
+                <% } %>
     </tbody>
 </table>

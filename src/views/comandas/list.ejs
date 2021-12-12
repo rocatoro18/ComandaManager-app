@@ -13,25 +13,27 @@
         </tr>
     </thead>
         <tbody>
-            {{#each comanda}}
+            <% if(comandas.length != 0) {%> 
+            <% for(let comanda = 0; comanda < comandas.length; comanda++)  {%> 
                 <tr>
-                    <td>{{NUMERO_MESA}}</td>
-                    <td>{{NUMERO_PERSONAS}}</td>
-                    <td>{{ANOTACION_COMANDA}}</td>
-                    <td>{{CANTIDAD_COMANDA}}$</td>
-                    <td>{{IMPORTE_COMANDA}}$</td>
+                    <td><%=comandas[comanda].NUMERO_MESA %></td>
+                    <td><%=comandas[comanda].NUMERO_PERSONAS %></td>
+                    <td><%=comandas[comanda].ANOTACION_COMANDA %></td>
+                    <td><%=comandas[comanda].CANTIDAD_COMANDA %>$</td>
+                    <td><%=comandas[comanda].IMPORTE_COMANDA %>$</td>
                     <td class="text-end">
-                        <a href="/comandas/edit/{{ID_COMANDA}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Editar</a>
-                        <a href="/comandas/delete/{{ID_COMANDA}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Eliminar</a>
+                        <a href="/comandas/edit/<%=comandas[comanda].ID_COMANDA%>" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Editar</a>
+                        <a href="/comandas/delete/<%=comandas[comanda].ID_COMANDA%>" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Eliminar</a>
                     </td>
                 </tr>
-                {{else}}
+                <% } %> 
+                <%} else {%> 
                 <div class="col-md-4 mx-auto">
                     <div class="card card-body text-center">
                         <p>No hay comandas registradas aún</p>
                         <a href="/comandas/add">Registra una comanda</a>
                     </div> 
                 </div>
-                {{/each}}
+                <% } %> 
     </tbody>
 </table>

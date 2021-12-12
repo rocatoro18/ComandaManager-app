@@ -12,25 +12,27 @@
         </tr>
     </thead>
         <tbody>
-            {{#each productos}}
+                <% if (productos.length != 0) {%> 
+                <% for(let producto = 0; producto < productos.length; producto++) {%> 
                 <tr>
-                    <td>{{NOMBRE_PRODUCTO}}</td>
-                    <td>{{CATEGORIA_PRODUCTO}}</td>
-                    <td>{{CANTIDAD_PRODUCTO}}</td>
-                    <td>{{UNIDAD_MEDIDA_PRODUCTO}}</td>
+                    <td><%= productos[producto].NOMBRE_PRODUCTO %></td>
+                    <td><%= productos[producto].CATEGORIA_PRODUCTO %></td>
+                    <td><%= productos[producto].CANTIDAD_PRODUCTO %></td>
+                    <td><%= productos[producto].UNIDAD_MEDIDA_PRODUCTO %></td>
                     <td class="text-end">
-                        <a href="/productos/edit/{{ID_PRODUCTO}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Editar</a>
-                        <a href="/productos/delete/{{ID_PRODUCTO}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Eliminar</a>
+                        <a href="/productos/edit/<%=productos[producto].ID_PRODUCTO%>" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Editar</a>
+                        <a href="/productos/delete/<%=productos[producto].ID_PRODUCTO%>" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Eliminar</a>
                     </td>
                 </tr>
-                {{else}}
+                <% } %> 
+                <% } else {%>
                 <div class="col-md-4 mx-auto">
                     <div class="card card-body text-center">
                         <p>No hay productos registrados aún</p>
                         <a href="/productos/add">Registra un producto</a>
                     </div> 
                 </div>
-                {{/each}}
+                <% } %> 
     </tbody>
 </table>
 

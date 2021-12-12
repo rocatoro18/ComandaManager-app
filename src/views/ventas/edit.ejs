@@ -6,9 +6,9 @@
         <div class="col-md-4 mx-auto">
             <div class="card">
                 <div class="card-body">
-                    <form action="/ventas/edit/{{venta.ID_VENTA}}" method="POST">
+                    <form action="/ventas/edit/<%=ventas.ID_VENTA%>" method="POST">
                         <div class="form-group">
-                            <input type = "text" value = "{{venta.TOTAL_VENTA}}" class = "form-control" name = "total_venta" placeholder="Total Venta" autofocus>
+                            <input type = "text" value = "<%=ventas.TOTAL_VENTA%>" class = "form-control" name = "total_venta" placeholder="Total Venta" autofocus>
                         </div>
                         <div class="form-group">
                             <button class = "btn btn-success btn-block">
