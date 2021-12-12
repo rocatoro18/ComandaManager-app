@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        {{#if user}}
+        <% if(user){%>
         <li class="nav-item active">
           <a class="nav-link active" aria-current="page" href="/profile">Perfil</a>
         </li>
@@ -46,14 +46,14 @@
             Salir
           </a>
         </li>
-        {{else}}
+        <% } else {%>
         <li class="nav-item">
           <a href="/signin" class="nav-link">Iniciar Sesión</a>
         </li>
         <li class="nav-item">
           <a href="/signup" class="nav-link">Registrarse</a>
         </li>
-        {{/if}}
+        <% } %>
       </ul>
     </div>
   </div>
