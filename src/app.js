@@ -12,7 +12,7 @@ const passport = require('passport');
 // MacOS
 // Login test
 // a
-
+//ejs
 // Inicializaciones 
 const app = express();
 require('./lib/passport');
