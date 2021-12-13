@@ -8,26 +8,39 @@
                 <div class="card-body">
                     <form action="/comandas/add" method="POST">
                         <div class="form-group">
-                            <input type = "text" class = "form-control" name = "numero_mesa" placeholder="Numero Mesa" autofocus>
+                            <input type = "text" class = "form-control" name = "numero_mesa" placeholder="Numero Mesa" autocomplete="off" autocomplete="chrome-off" autofocus>
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" class = "form-control" name = "numero_personas" placeholder="Numero Personas">
+                            <input type = "text" class = "form-control" name = "numero_personas" placeholder="Numero Personas" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" class= "form-control" name = "anotacion_comanda" placeholder="Anotación Comanda">
+                            <input type = "text" class= "form-control" name = "anotacion_comanda" placeholder="Anotación Comanda" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" class= "form-control" name = "cantidad_comanda" placeholder="Cantidad Comanda">
+                            <input type = "text" class= "form-control" name = "cantidad_comanda" placeholder="Cantidad Comanda" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" class= "form-control" name = "importe_comanda" placeholder="Importe Comanda">
+                            <input type = "text" class= "form-control" name = "importe_comanda" placeholder="Importe Comanda" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
                             <button class = "btn btn-success btn-block">
                                 Guardar
                             </button>
                         </div>
                     </form>
+                    <% if(typeof validaciones != 'undefined') {%>
+                        <% validaciones.forEach((validacion)=>{ %>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong><%=validacion.msg%></strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                    <% })%>
+                    <% }%>
                 </div>
             </div>
         </div>

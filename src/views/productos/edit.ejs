@@ -8,23 +8,35 @@
                 <div class="card-body">
                     <form action="/productos/edit/<%=producto.ID_PRODUCTO%>" method="POST">
                         <div class="form-group">
-                            <input type = "text" value = "<%=producto.NOMBRE_PRODUCTO%>" class = "form-control" name = "nombre_producto" placeholder="Nombre Producto" autofocus>
+                            <input type = "text" value = "<%=producto.NOMBRE_PRODUCTO%>" class = "form-control" name = "nombre_producto" placeholder="Nombre Producto"  autocomplete="off" autocomplete="chrome-off"autofocus>
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" value = "<%=producto.CATEGORIA_PRODUCTO%>" class = "form-control" name = "categoria_producto" placeholder="Categoria Producto">
+                            <input type = "text" value = "<%=producto.CATEGORIA_PRODUCTO%>" class = "form-control" name = "categoria_producto" placeholder="Categoria Producto" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" value = "<%=producto.CANTIDAD_PRODUCTO%>" class= "form-control" name = "cantidad_producto" placeholder="Cantidad Producto">
+                            <input type = "text" value = "<%=producto.CANTIDAD_PRODUCTO%>" class= "form-control" name = "cantidad_producto" placeholder="Cantidad Producto" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" value = "<%=producto.UNIDAD_MEDIDA_PRODUCTO%>" class= "form-control" name = "unidad_medida_producto" placeholder="Unidad Medida Producto">
+                            <input type = "text" value = "<%=producto.UNIDAD_MEDIDA_PRODUCTO%>" class= "form-control" name = "unidad_medida_producto" placeholder="Unidad Medida Producto" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
                             <button class = "btn btn-success btn-block">
                                 Modificar
                             </button>
                         </div>
                     </form>
+                    <% if(typeof validaciones != 'undefined') {%>
+                        <% validaciones.forEach((validacion)=>{ %>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong><%=validacion.msg%></strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                    <% })%>
+                    <% }%>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <form action="/ventas/edit/<%=ventas.ID_VENTA%>" method="POST">
                         <div class="form-group">
-                            <input type = "text" value = "<%=ventas.TOTAL_VENTA%>" class = "form-control" name = "total_venta" placeholder="Total Venta" autofocus>
+                            <input type = "text" value = "<%=ventas.TOTAL_VENTA%>" class = "form-control" name = "total_venta" placeholder="Total Venta" autocomplete="off" autocomplete="chrome-off" autofocus>
                         </div>
                         <div class="form-group">
                             <button class = "btn btn-success btn-block">

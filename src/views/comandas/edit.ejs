@@ -8,20 +8,25 @@
                 <div class="card-body">
                     <form action="/comandas/edit/<%=comandas.ID_COMANDA%>" method="POST">
                         <div class="form-group">
-                            <input type = "text" value = "<%=comandas.NUMERO_MESA%>" class = "form-control" name = "numero_mesa" placeholder="Número Mesa" autofocus>
+                            <input type = "text" value = "<%=comandas.NUMERO_MESA%>" class = "form-control" name = "numero_mesa" placeholder="Número Mesa" autocomplete="off" autocomplete="chrome-off" autofocus>
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" value = "<%=comandas.NUMERO_PERSONAS%>" class = "form-control" name = "numero_personas" placeholder="Número Personas">
+                            <input type = "text" value = "<%=comandas.NUMERO_PERSONAS%>" class = "form-control" name = "numero_personas" placeholder="Número Personas" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" value = "<%=comandas.ANOTACION_COMANDA%>" class= "form-control" name = "anotacion_comanda" placeholder="Anotación Comanda">
+                            <input type = "text" value = "<%=comandas.ANOTACION_COMANDA%>" class= "form-control" name = "anotacion_comanda" placeholder="Anotación Comanda" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" value = "<%=comandas.CANTIDAD_COMANDA%>" class= "form-control" name = "cantidad_comanda" placeholder="Cantidad Comanda">
+                            <input type = "text" value = "<%=comandas.CANTIDAD_COMANDA%>" class= "form-control" name = "cantidad_comanda" placeholder="Cantidad Comanda" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
-                            <input type = "text" value = "<%=comandas.IMPORTE_COMANDA%>" class= "form-control" name = "importe_comanda" placeholder="Importe Comanda">
+                            <input type = "text" value = "<%=comandas.IMPORTE_COMANDA%>" class= "form-control" name = "importe_comanda" placeholder="Importe Comanda" autocomplete="off" autocomplete="chrome-off">
                         </div>
+                        <br>
                         <div class="form-group">
                             <button class = "btn btn-success btn-block">
                                 Modificar

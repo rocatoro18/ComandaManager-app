@@ -1,6 +1,7 @@
 <%- include("../template/cabecera") %>
 <%- include("../partials/navigation") %>
 
+
 <div class="container p-4">
     <div class="row">
         <div class="col-md-4 mx-auto">
@@ -10,13 +11,13 @@
                 </div>
                 <div class="card-body">
                     <img src="/img/PeccataMinutaVector.svg" alt="Logo Peccata Minuta" class="card-img-top mx-auto m-2 rounded-circle w-50">
-                    <form action="/signin" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="NOMBRE_USUARIO" placeholder="Nombre de Usuario" class="form-control">
+                    <form action="/signin" id="form-signin" method="POST">
+                        <div class="form-group success">
+                            <input type="text" name="NOMBRE_USUARIO" placeholder="Nombre de Usuario" id="username" class="form-control" autocomplete="off" autocomplete="chrome-off">
                         </div>
                         <br>
-                        <div class="form-group">
-                            <input type="password" name="PASSWORD" placeholder="Contraseña" class="form-control">
+                        <div class="form-group error">
+                            <input type="password" name="PASSWORD" placeholder="Contraseña" id="password" class="form-control" autocomplete="off" autocomplete="chrome-off" required>
                         </div>
                         <br>
                         <div class="form-group">
@@ -25,6 +26,15 @@
                             </button>
                         </div>
                     </form>
+
+                    <% if(typeof validaciones != 'undefined') {%>
+                        <% validaciones.forEach((validacion)=>{ %>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong><%=validacion.msg%></strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                    <% })%>
+                    <% }%>
                 </div>
             </div>
         </div>

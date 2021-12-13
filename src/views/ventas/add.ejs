@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <form action="/ventas/add" method="POST">
                         <div class="form-group">
-                            <input type = "text" class = "form-control" name = "total_venta" placeholder="Total Venta" autofocus>
+                            <input type = "text" class = "form-control" name = "total_venta" placeholder="Total Venta" autocomplete="off" autocomplete="chrome-off" autofocus>
                         </div>
                         <div class="form-group">
                             <button class = "btn btn-success btn-block">
@@ -16,6 +16,14 @@
                             </button>
                         </div>
                     </form>
+                    <% if(typeof validaciones != 'undefined') {%>
+                        <% validaciones.forEach((validacion)=>{ %>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong><%=validacion.msg%></strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                    <% })%>
+                    <% }%>
                 </div>
             </div>
         </div>

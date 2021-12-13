@@ -11,27 +11,27 @@
                 <div class="card-body">
                     <form action="/signup" method="POST">
                         <div class="form-group">
-                            <input type="text" name="NOMBRE_EMPLEADO" placeholder="Nombre" class="form-control" autofocus>
+                            <input type="text" name="NOMBRE_EMPLEADO" placeholder="Nombre" class="form-control" autocomplete="off" autocomplete="chrome-off" autofocus>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="APELLIDOS_EMPLEADO" placeholder="Apellidos" class="form-control">
+                            <input type="text" name="APELLIDOS_EMPLEADO" placeholder="Apellidos" class="form-control" autocomplete="off" autocomplete="chrome-off">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="TELEFONO_EMPLEADO" placeholder="Telefono" class="form-control">
+                            <input type="text" name="TELEFONO_EMPLEADO" placeholder="Telefono" class="form-control" autocomplete="off" autocomplete="chrome-off">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="CORREO_EMPLEADO" placeholder="Correo" class="form-control">
+                            <input type="text" name="CORREO_EMPLEADO" placeholder="Correo" class="form-control" autocomplete="off" autocomplete="chrome-off">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="NOMBRE_USUARIO" placeholder="Nombre de Usuario" class="form-control">
+                            <input type="text" name="NOMBRE_USUARIO" placeholder="Nombre de Usuario" class="form-control" autocomplete="off" autocomplete="chrome-off">
                         </div>
 
                         <div class="form-group">
-                            <input type="password" name="PASSWORD" placeholder="Contraseña" class="form-control">
+                            <input type="password" name="PASSWORD" placeholder="Contraseña" class="form-control" autocomplete="off" autocomplete="chrome-off">
                         </div>
 
                         <div class="form-group">
@@ -40,6 +40,14 @@
                             </button>
                         </div>
                     </form>
+                    <% if(typeof validaciones != 'undefined') {%>
+                        <% validaciones.forEach((validacion)=>{ %>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong><%=validacion.msg%></strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                    <% })%>
+                    <% }%>
                 </div>
             </div>
         </div>
